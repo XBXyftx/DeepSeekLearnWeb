@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研究方法设计 - DeepSeek案例库</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="../../index.html" class="text-xl font-bold text-blue-600">DeepSeek指南</a>
+                    </div>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="../prompt-lab.html" class="inline-flex items-center px-1 pt-1 text-gray-900 hover:text-blue-600">Prompt实验室</a>
+                        <a href="../tools.html" class="inline-flex items-center px-1 pt-1 text-gray-900 hover:text-blue-600">工具矩阵</a>
+                        <a href="../cases.html" class="inline-flex items-center px-1 pt-1 text-blue-600 border-b-2 border-blue-600">案例库</a>
+                    </div>
+                </div>
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden flex items-center">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div x-show="mobileMenuOpen" class="md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../prompt-lab.html" class="block px-3 py-2 text-gray-900 hover:text-blue-600">Prompt实验室</a>
+                <a href="../tools.html" class="block px-3 py-2 text-gray-900 hover:text-blue-600">工具矩阵</a>
+                <a href="../cases.html" class="block px-3 py-2 text-blue-600 bg-blue-50">案例库</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 导航栏占位元素 -->
+    <div class="h-16"></div>
+
+    <!-- 主要内容 -->
+    <main class="pt-16">
+        <!-- 页面标题 -->
+        <section class="bg-gradient-to-r from-blue-500 to-blue-700 text-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-3xl font-bold">研究方法设计</h1>
+                <p class="mt-2 text-lg">利用AI助手优化研究方法和实验设计，提高研究质量</p>
+            </div>
+        </section>
+
+        <!-- 内容区域 -->
+        <section class="py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- 案例概述 -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-semibold mb-4">案例概述</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-lg font-medium mb-2">适用场景</h3>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                <li>实验设计优化</li>
+                                <li>研究方法选择</li>
+                                <li>数据分析方案</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-medium mb-2">预期效果</h3>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                <li>提高研究可行性</li>
+                                <li>优化实验流程</li>
+                                <li>增强结果可靠性</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 操作步骤 -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-semibold mb-6">操作步骤</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold mr-4">1</div>
+                            <div>
+                                <h3 class="text-lg font-medium mb-2">研究目标分析</h3>
+                                <p class="text-gray-600 mb-4">明确研究目标，确定关键变量。</p>
+                                <pre class="bg-gray-100 p-4 rounded-lg text-sm overflow-x-auto mb-4">
+请帮我分析以下研究目标：
+[描述研究目标]
+
+分析要求：
+1. 识别关键变量
+2. 确定研究类型
+3. 提出初步假设</pre>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold mr-4">2</div>
+                            <div>
+                                <h3 class="text-lg font-medium mb-2">方法选择与设计</h3>
+                                <p class="text-gray-600 mb-4">选择合适的研究方法，设计实验流程。</p>
+                                <pre class="bg-gray-100 p-4 rounded-lg text-sm overflow-x-auto mb-4">
+基于以下研究目标，请推荐合适的研究方法：
+[粘贴研究目标分析]
+
+设计要点：
+1. 方法选择理由
+2. 实验流程设计
+3. 数据收集方案</pre>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold mr-4">3</div>
+                            <div>
+                                <h3 class="text-lg font-medium mb-2">方案优化与完善</h3>
+                                <p class="text-gray-600 mb-4">优化研究方案，完善实验细节。</p>
+                                <pre class="bg-gray-100 p-4 rounded-lg text-sm overflow-x-auto mb-4">
+请对以下研究方案进行优化：
+[粘贴初步方案]
+
+优化重点：
+1. 控制变量设计
+2. 样本量确定
+3. 数据分析方法</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 最佳实践 -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-2xl font-semibold mb-6">最佳实践</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-lg font-medium mb-3">提示词优化</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>提供详细的研究背景</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>明确研究限制条件</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>分步骤优化方案</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-medium mb-3">注意事项</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-exclamation-triangle text-yellow-500 mt-1 mr-2"></i>
+                                    <span>考虑研究伦理问题</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-exclamation-triangle text-yellow-500 mt-1 mr-2"></i>
+                                    <span>确保方法可行性</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-exclamation-triangle text-yellow-500 mt-1 mr-2"></i>
+                                    <span>注意资源限制</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">关于我们</h3>
+                    <p class="text-gray-400">致力于提供最优质的DeepSeek使用指南</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../prompt-lab.html" class="text-gray-400 hover:text-white">Prompt实验室</a></li>
+                        <li><a href="../tools.html" class="text-gray-400 hover:text-white">工具矩阵</a></li>
+                        <li><a href="../cases.html" class="text-gray-400 hover:text-white">案例库</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">联系我们</h3>
+                    <p class="text-gray-400">邮箱：contact@deepseek.guide</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2024 DeepSeek指南. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('app', () => ({
+                mobileMenuOpen: false
+            }))
+        })
+    </script>
+</body>
+</html> 
