@@ -17,6 +17,7 @@
                     <div class="flex-shrink-0 flex items-center">
                         <span class="text-xl font-bold text-blue-600">DeepSeek指南</span>
                     </div>
+                    <!-- 桌面端导航菜单 -->
                     <div class="hidden md:ml-6 md:flex md:space-x-8">
                         <a href="pages/prompt-lab.html" class="inline-flex items-center px-1 pt-1 text-gray-900 hover:text-blue-600">Prompt实验室</a>
                         <a href="pages/tools.html" class="inline-flex items-center px-1 pt-1 text-gray-900 hover:text-blue-600">工具矩阵</a>
@@ -32,11 +33,11 @@
             </div>
         </div>
         <!-- 移动端菜单 -->
-        <div x-show="mobileMenuOpen" class="md:hidden">
+        <div x-show="mobileMenuOpen" x-cloak class="md:hidden absolute w-full bg-white shadow-lg">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="pages/prompt-lab.html" class="block px-3 py-2 text-gray-900 hover:text-blue-600">Prompt实验室</a>
-                <a href="pages/tools.html" class="block px-3 py-2 text-gray-900 hover:text-blue-600">工具矩阵</a>
-                <a href="pages/cases.html" class="block px-3 py-2 text-gray-900 hover:text-blue-600">案例库</a>
+                <a href="pages/prompt-lab.html" class="block px-3 py-2 text-gray-900 hover:bg-blue-50 hover:text-blue-600">Prompt实验室</a>
+                <a href="pages/tools.html" class="block px-3 py-2 text-gray-900 hover:bg-blue-50 hover:text-blue-600">工具矩阵</a>
+                <a href="pages/cases.html" class="block px-3 py-2 text-gray-900 hover:bg-blue-50 hover:text-blue-600">案例库</a>
             </div>
         </div>
     </nav>
