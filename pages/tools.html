@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具矩阵 - DeepSeek高效使用指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="../index.html" class="text-xl font-bold text-blue-600">DeepSeek指南</a>
+                    </div>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="prompt-lab.html" class="inline-flex items-center px-1 pt-1 text-gray-900 hover:text-blue-600">Prompt实验室</a>
+                        <a href="tools.html" class="inline-flex items-center px-1 pt-1 text-blue-600 border-b-2 border-blue-600">工具矩阵</a>
+                        <a href="cases.html" class="inline-flex items-center px-1 pt-1 text-gray-900 hover:text-blue-600">案例库</a>
+                    </div>
+                </div>
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden flex items-center">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div x-show="mobileMenuOpen" class="md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="prompt-lab.html" class="block px-3 py-2 text-gray-900 hover:text-blue-600">Prompt实验室</a>
+                <a href="tools.html" class="block px-3 py-2 text-blue-600 bg-blue-50">工具矩阵</a>
+                <a href="cases.html" class="block px-3 py-2 text-gray-900 hover:text-blue-600">案例库</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="pt-16">
+        <!-- 页面标题 -->
+        <section class="bg-gradient-to-r from-blue-500 to-blue-700 text-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-3xl font-bold">工具矩阵</h1>
+                <p class="mt-2 text-lg">探索与DeepSeek协同工作的各类工具</p>
+            </div>
+        </section>
+
+        <!-- 内容区域 -->
+        <section class="py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- 内容创作工具 -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-6">内容创作工具</h2>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Canva -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-palette text-2xl text-blue-600 mr-3"></i>
+                                <h3 class="text-xl font-semibold">Canva</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">专业的设计模板和工具，用于创建视觉内容</p>
+                            <ul class="space-y-2 mb-4">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    丰富的模板库
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    协作功能
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    品牌套件
+                                </li>
+                            </ul>
+                            <a href="#" class="text-blue-600 hover:text-blue-800">了解更多 →</a>
+                        </div>
+
+                        <!-- 剪映 -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-video text-2xl text-blue-600 mr-3"></i>
+                                <h3 class="text-xl font-semibold">剪映</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">专业的视频编辑工具，支持多平台</p>
+                            <ul class="space-y-2 mb-4">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    智能剪辑
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    特效库
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    云端同步
+                                </li>
+                            </ul>
+                            <a href="#" class="text-blue-600 hover:text-blue-800">了解更多 →</a>
+                        </div>
+
+                        <!-- PowerPoint -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-presentation text-2xl text-blue-600 mr-3"></i>
+                                <h3 class="text-xl font-semibold">PowerPoint</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">专业的演示文稿制作工具</p>
+                            <ul class="space-y-2 mb-4">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    智能设计
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    动画效果
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    协作编辑
+                                </li>
+                            </ul>
+                            <a href="#" class="text-blue-600 hover:text-blue-800">了解更多 →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI辅助工具 -->
+                <div>
+                    <h2 class="text-2xl font-semibold mb-6">AI辅助工具</h2>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- DeepSeek -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-robot text-2xl text-blue-600 mr-3"></i>
+                                <h3 class="text-xl font-semibold">DeepSeek</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">强大的AI文本生成和对话助手</p>
+                            <ul class="space-y-2 mb-4">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    自然语言处理
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    代码生成
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    多语言支持
+                                </li>
+                            </ul>
+                            <a href="#" class="text-blue-600 hover:text-blue-800">了解更多 →</a>
+                        </div>
+
+                        <!-- Midjourney -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-image text-2xl text-blue-600 mr-3"></i>
+                                <h3 class="text-xl font-semibold">Midjourney</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">专业的AI图像生成工具</p>
+                            <ul class="space-y-2 mb-4">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    高质量图像
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    风格定制
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    批量生成
+                                </li>
+                            </ul>
+                            <a href="#" class="text-blue-600 hover:text-blue-800">了解更多 →</a>
+                        </div>
+
+                        <!-- ChatGPT -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-comments text-2xl text-blue-600 mr-3"></i>
+                                <h3 class="text-xl font-semibold">ChatGPT</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">OpenAI开发的对话式AI助手</p>
+                            <ul class="space-y-2 mb-4">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    自然对话
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    知识问答
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    任务协助
+                                </li>
+                            </ul>
+                            <a href="#" class="text-blue-600 hover:text-blue-800">了解更多 →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">关于我们</h3>
+                    <p class="text-gray-400">致力于提供最优质的DeepSeek使用指南</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="prompt-lab.html" class="text-gray-400 hover:text-white">Prompt实验室</a></li>
+                        <li><a href="tools.html" class="text-gray-400 hover:text-white">工具矩阵</a></li>
+                        <li><a href="cases.html" class="text-gray-400 hover:text-white">案例库</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">联系我们</h3>
+                    <p class="text-gray-400">邮箱：contact@deepseek.guide</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2024 DeepSeek指南. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('app', () => ({
+                mobileMenuOpen: false
+            }))
+        })
+    </script>
+</body>
+</html> 
