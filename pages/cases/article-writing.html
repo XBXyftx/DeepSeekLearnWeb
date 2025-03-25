@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学术论文写作指南 - DeepSeek案例库</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50" x-data="{ mobileMenuOpen: false }">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="../../index.html" class="text-xl font-bold text-blue-600">DeepSeek指南</a>
+                    </div>
+                    <!-- 桌面端导航菜单 -->
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="../prompt-lab.html" class="inline-flex items-center px-1 pt-1 text-gray-900 hover:text-blue-600">Prompt实验室</a>
+                        <a href="../tools.html" class="inline-flex items-center px-1 pt-1 text-gray-900 hover:text-blue-600">工具矩阵</a>
+                        <a href="../cases.html" class="inline-flex items-center px-1 pt-1 text-gray-900 hover:text-blue-600">案例库</a>
+                    </div>
+                </div>
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden flex items-center">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div x-show="mobileMenuOpen" x-cloak class="md:hidden absolute w-full bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../prompt-lab.html" class="block px-3 py-2 text-gray-900 hover:bg-blue-50 hover:text-blue-600">Prompt实验室</a>
+                <a href="../tools.html" class="block px-3 py-2 text-gray-900 hover:bg-blue-50 hover:text-blue-600">工具矩阵</a>
+                <a href="../cases.html" class="block px-3 py-2 text-gray-900 hover:bg-blue-50 hover:text-blue-600">案例库</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 导航栏占位元素 -->
+    <div class="h-16"></div>
+
+    <!-- 主要内容 -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="mb-12">
+            <h1 class="text-3xl font-bold mb-4">学术论文写作指南</h1>
+            <p class="text-gray-600">利用DeepSeek提升学术写作效率和质量</p>
+        </div>
+
+        <!-- 案例概述 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">案例概述</h2>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-4">适用场景</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                    <li>文献综述撰写</li>
+                    <li>研究方法设计</li>
+                    <li>实验数据分析</li>
+                    <li>论文结构优化</li>
+                    <li>学术表达润色</li>
+                </ul>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-4">预期效果</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                    <li>提高文献阅读效率</li>
+                    <li>优化论文结构和逻辑</li>
+                    <li>改进学术表达准确性</li>
+                    <li>加强论证的严谨性</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 操作步骤 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">操作步骤</h2>
+            <div class="space-y-6">
+                <!-- 步骤1 -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-4">1. 文献综述辅助</h3>
+                    <p class="text-gray-600 mb-4">使用以下提示词模板分析文献：</p>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <pre class="text-sm text-gray-700">请帮我分析以下文献：
+[文献内容]
+
+需要关注的方面：
+1. 核心观点和创新点
+2. 研究方法和框架
+3. 主要发现和结论
+4. 与本研究的关联
+5. 可能的研究缺口</pre>
+                    </div>
+                </div>
+
+                <!-- 步骤2 -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-4">2. 研究方法设计</h3>
+                    <p class="text-gray-600 mb-4">使用以下提示词优化研究方法：</p>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <pre class="text-sm text-gray-700">基于[研究目标]，请帮我：
+1. 设计研究框架
+2. 确定变量定义
+3. 选择研究方法
+4. 设计数据收集方案
+5. 规划分析步骤</pre>
+                    </div>
+                </div>
+
+                <!-- 步骤3 -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-4">3. 论文写作优化</h3>
+                    <p class="text-gray-600 mb-4">使用以下提示词改进论文：</p>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <pre class="text-sm text-gray-700">请帮我优化以下论文段落：
+[论文内容]
+
+优化要求：
+1. 提高学术表达准确性
+2. 加强逻辑连贯性
+3. 完善论证过程
+4. 规范学术用语
+5. 改进段落结构</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最佳实践 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">最佳实践</h2>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-4">提示词优化建议</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                    <li>明确说明研究领域和方向</li>
+                    <li>提供具体的研究问题</li>
+                    <li>指定学科特定的要求</li>
+                    <li>说明目标期刊的格式要求</li>
+                    <li>提供相关参考文献信息</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold mt-6 mb-4">注意事项</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                    <li>确保学术诚信和原创性</li>
+                    <li>仔细核实AI生成的内容</li>
+                    <li>保持论文的学术规范</li>
+                    <li>注意引用格式的准确性</li>
+                    <li>保持批判性思维</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">关于我们</h3>
+                    <p class="text-gray-400">致力于提供最优质的DeepSeek使用指南</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../prompt-lab.html" class="text-gray-400 hover:text-white">Prompt实验室</a></li>
+                        <li><a href="../tools.html" class="text-gray-400 hover:text-white">工具矩阵</a></li>
+                        <li><a href="../cases.html" class="text-gray-400 hover:text-white">案例库</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">联系我们</h3>
+                    <p class="text-gray-400">邮箱：contact@deepseek.guide</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2024 DeepSeek指南. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
